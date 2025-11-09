@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { Send, Mic, Plus, Paperclip, Search, Upload, Menu, ShoppingCart, User, Phone } from 'lucide-react';
 
-const TriGardeningChat = () => {
+const PlantClinic = () => {
   const [message, setMessage] = useState('');
   const [selectedOption, setSelectedOption] = useState('এই সমস্যার কি বন্ধু, ব্যাকটি নাকি ছত্রাক?');
 
@@ -251,4 +251,4 @@ const TriGardeningChat = () => {
   );
 };
 
-export default TriGardeningChat;
+export default PlantClinic;

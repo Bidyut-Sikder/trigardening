@@ -25,39 +25,38 @@ const products = [
     name: "Monstera Deliciosa",
     category: "Indoor Plant",
     price: "2000 - 3,400",
-    rating: 4.5,
+    rating: 5,
     reviews: 24,
-    image:
-      "https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?w=500",
+    image: "/products/PexelsPhotobyJuliaVolk.png"
   },
   {
     id: 2,
     name: "Organic Compost Fertilizer",
     category: "Fertilizer",
     price: "60 - 440",
-    rating: 4.0,
+    rating: 4,
     reviews: 12,
     image:
-      "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=500",
+      "/products/PexelsPhotobyAnnaShvets.png",
   },
   {
     id: 3,
     name: "Pruning Shears",
     category: "Equipment",
     price: "180 - 450",
-    rating: 4.3,
+    rating: 4,
     reviews: 34,
     image:
-      "https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?w=500",
+      "/products/PexelsPhotobyPavelDanilyuk.png",
   },
   {
     id: 4,
     name: "Snake Plant",
     category: "Indoor Plant",
     price: "150 - 500",
-    rating: 4.8,
+    rating: 4,
     reviews: 35,
     image:
-      "https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?w=500",
+      "/products/PexelsPhotobyFabianStroobants.png",
   },
 ];
