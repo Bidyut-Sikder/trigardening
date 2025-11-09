@@ -22,10 +22,10 @@ export default function BreadCrumbNavigation() {
   ];
 
   return (
-    <div className="w-full bg-white pb-1 ">
+    <div className=" w-full bg-white shadow">
       {/* Main Navigation */}
       <nav className=" border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center space-x-8 h-16">
             {navItems.map((item) => (
               <button
@@ -48,7 +48,7 @@ export default function BreadCrumbNavigation() {
       </nav>
 
       {/* Breadcrumbs */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center space-x-2 text-sm">
           {breadcrumbs.map((crumb, index) => (
             <React.Fragment key={index}>

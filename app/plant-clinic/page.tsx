@@ -11,7 +11,8 @@ import {
   Menu,
   ShoppingCart,
   User,
-  Phone,PanelRight
+  Phone,
+  PanelRight,
 } from "lucide-react";
 import Image from "next/image";
 import { BsReverseLayoutSidebarReverse } from "react-icons/bs";
@@ -59,16 +60,8 @@ const PlantClinic = () => {
             } text-white  rounded p-2 transition`}
           >
             <PanelRight size={20} />
-            {/* <Image
-              width={20}
-              height={20}
-              src="/left-side-panel.png"
-              alt="icon"
-            /> */}
           </button>
         </div>
-
-
 
         {/* Action Buttons */}
         <div className="px-1 py-1 space-y-1">
