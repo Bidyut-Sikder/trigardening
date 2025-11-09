@@ -118,16 +118,16 @@ function Header() {
           {/* Mobile menu */}
           {mobileMenuOpen && (
             <div className="md:hidden pb-4 space-y-2">
-              <Link href="#" className="block py-2 hover:text-green-200">
+              <Link href="/" className="block py-2 hover:text-green-200">
                 Home
               </Link>
-              <Link href="#" className="block py-2 hover:text-green-200">
+              <Link href="/products" className="block py-2 hover:text-green-200">
                 Products
               </Link>
-              <Link href="#" className="block py-2 hover:text-green-200">
+              <Link href="/blog" className="block py-2 hover:text-green-200">
                 Blog
               </Link>
-              <Link href="#" className="block py-2 hover:text-green-200">
+              <Link href="/plant-clinic" className="block py-2 hover:text-green-200">
                 Plant Clinic
               </Link>
               <button className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-full w-full justify-center mt-4">

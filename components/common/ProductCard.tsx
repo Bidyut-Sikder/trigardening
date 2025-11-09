@@ -5,7 +5,7 @@ export default function ProductCard({ item }: { item: any }) {
     <div className="relative group bg-white h-[380px] rounded-xl shadow-md hover:shadow-2xl overflow-hidden flex flex-col cursor-pointer transition">
       {/* Overlay Add to Cart Button (Hidden by default) */}
       <button
-        className="absolute w-[200px] justify-center  top-1/5 left-1/2 -translate-x-1/2 -translate-y-1/2
+        className="absolute md:w-[200px] w-[300px] justify-center  top-1/5 left-1/2 -translate-x-1/2 -translate-y-1/2
         bg-[#2D5016] text-white py-2 px-4 rounded-lg flex items-center gap-2
         opacity-0 group-hover:opacity-100 z-20 transition duration-300"
       >
@@ -59,7 +59,7 @@ export default function ProductCard({ item }: { item: any }) {
         </button>
         <button>
           <span
-            className="absolute w-[225px] md:w-[350px] left-1/2 bottom-0 -translate-x-1/2
+            className="absolute sm:w-[225px] md:w-[350px] w-[372px] left-1/2 bottom-0 -translate-x-1/2
     bg-[#7A9B57] text-white py-4 px-5 rounded-b-lg flex items-center justify-center
     opacity-0 translate-y-4 scale-95 group-hover:opacity-100 group-hover:translate-y-0 group-hover:scale-100
     z-20 transition-all duration-500 ease-in-out"
