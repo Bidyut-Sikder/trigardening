@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Search } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function TriGardeningBlog() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -131,7 +132,8 @@ export default function TriGardeningBlog() {
           {/* Blog Posts Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             {blogPosts.map((post) => (
-              <div
+              <Link
+                href={`/blog/1`}
                 key={post.id}
                 className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition"
               >
@@ -149,13 +151,15 @@ export default function TriGardeningBlog() {
                   <h3 className="text-2xl font-medium text-[#000000] mt-2 mb-2">
                     {post.title}
                   </h3>
-                  <p className="text-[#000000] text-lg font-normal mb-4">{post.excerpt}</p>
+                  <p className="text-[#000000] text-lg font-normal mb-4">
+                    {post.excerpt}
+                  </p>
                   <div className="flex items-center justify-between text-sm text-gray-500">
                     <span>{post.date}</span>
                     <span>{post.readTime}</span>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 
@@ -215,18 +219,20 @@ export default function TriGardeningBlog() {
               {recentPosts.map((post, index) => (
                 <div
                   key={index}
-                  className="flex space-x-3 cursor-pointer group"
+                  className="flex items-center space-x-3 cursor-pointer group"
                 >
                   <img
                     src={post.image}
                     alt={post.title}
-                    className="w-16 h-16 rounded-lg object-cover"
+                    className="w-19 h-19 rounded-lg object-cover"
                   />
                   <div className="flex-1">
-                    <h4 className="text-lg font-medium text-gray-900 group-hover:text-green-600 transition line-clamp-2">
+                    <h4 className="text-lg font-medium text-[#404040] transition line-clamp-2">
                       {post.title}
                     </h4>
-                    <p className="text-[16px] text-[#8C8C8C] font-normal mt-1">{post.date}</p>
+                    <p className="text-[16px] font-medium text-[#8C8C8C]  mt-1">
+                      {post.date}
+                    </p>
                   </div>
                 </div>
               ))}
