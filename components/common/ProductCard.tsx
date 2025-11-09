@@ -1,4 +1,3 @@
-
 import { FaStar } from "react-icons/fa";
 
 export default function ProductCard({ item }: { item: any }) {
@@ -54,15 +53,16 @@ export default function ProductCard({ item }: { item: any }) {
         {/* Bottom Button - Changes on hover */}
         <button
           className="w-full group-hover:hidden  mt-auto bg-[#2D5016] text-white py-2 rounded-lg
-          transition z-20"
+          transition z-20 text-[22px] font-semibold"
         >
           Add to Cart
         </button>
         <button>
           <span
-            className="absolute w-[225px]  justify-center  bottom-[-33] left-1/2 -translate-x-1/2 -translate-y-1/2
-        bg-[#2D5016] text-white p-5 mb-0  rounded-b-lg  items-center 
-        opacity-0 group-hover:opacity-100 ease-initial z-20 transition duration-500 hidden group-hover:inline "
+            className="absolute w-[225px] md:w-[350px] left-1/2 bottom-0 -translate-x-1/2
+    bg-[#7A9B57] text-white py-4 px-5 rounded-b-lg flex items-center justify-center
+    opacity-0 translate-y-4 scale-95 group-hover:opacity-100 group-hover:translate-y-0 group-hover:scale-100
+    z-20 transition-all duration-500 ease-in-out"
           >
             View Details
           </span>

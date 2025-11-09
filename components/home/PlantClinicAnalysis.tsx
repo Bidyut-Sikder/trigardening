@@ -1,8 +1,8 @@
-import { FiCamera } from "react-icons/fi";
-
+import { CiCamera } from "react-icons/ci";
+import { FaCamera } from "react-icons/fa";
 export default function PlantClinic() {
   return (
-    <section className="py-20 bg-[#F5F9E9]">
+    <section className="py-20 bg-[#FFFFF]">
       <div className="container mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
 
         {/* Text Side */}
@@ -16,16 +16,16 @@ export default function PlantClinic() {
           </p>
 
           <button className="mt-6 bg-[#7A9B57] text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 shadow-md hover:bg-secondary hover:text-primary transition">
-            <FiCamera size={20} /> Diagnose Your Plant
+            <FaCamera size={20} /> Diagnose Your Plant
           </button>
         </div>
 
         {/* Right Image Side */}
         <div className="flex justify-center md:justify-end">
           <img
-            src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=500"
+            src="/Rectangle7.png"
             alt="Plant Leaves"
-            className="w-64 h-72 object-cover rounded-xl shadow-lg"
+            className="w-64 h-72 object-cover rounded-4xl shadow-lg"
           />
         </div>
 

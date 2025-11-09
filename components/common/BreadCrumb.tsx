@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { ChevronRight } from "lucide-react";
 
@@ -32,7 +33,7 @@ export default function BreadCrumbNavigation() {
                 onClick={() => setActiveNav(item)}
                 className={`relative px-1 py-5 text-base font-medium transition-colors ${
                   activeNav === item
-                    ? "text-green-600"
+                    ? "text-[#7A9B57]"
                     : "text-gray-600 hover:text-gray-900"
                 }`}
               >
@@ -55,7 +56,7 @@ export default function BreadCrumbNavigation() {
                 href={crumb.href}
                 className={`${
                   crumb.active
-                    ? "text-green-600 font-medium"
+                    ? "text-[#7A9B57] font-medium"
                     : "text-gray-600 hover:text-gray-900"
                 } transition-colors`}
               >
