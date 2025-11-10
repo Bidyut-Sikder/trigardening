@@ -71,9 +71,10 @@ export default function About() {
 
       {/* ✅ Team Experts */}
       <section className="py-16 bg-white">
-        <h2 className="text-3xl sm:text-xl font-bold text-[#2D5016]">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#2D5016]">
           Meet Our Gardening Experts
         </h2>
+
         <p className="text-[#2D5016] mt-2 max-w-xl mx-auto">
           Our passionate team of horticulturists and plant specialists brings
           years of combined experience to help your garden flourish
