@@ -71,7 +71,7 @@ export default function About() {
 
       {/* ✅ Team Experts */}
       <section className="py-16 bg-white">
-        <h2 className="text-3xl font-bold text-[#2D5016]">
+        <h2 className="text-3xl sm:text-xl font-bold text-[#2D5016]">
           Meet Our Gardening Experts
         </h2>
         <p className="text-[#2D5016] mt-2 max-w-xl mx-auto">

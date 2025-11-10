@@ -130,10 +130,10 @@ function Header() {
               <Link href="/plant-clinic" className="block py-2 hover:text-green-200">
                 Plant Clinic
               </Link>
-              <button className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-full w-full justify-center mt-4">
+              <Link href={'/about'} className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-full w-full justify-center mt-4">
                 <Phone size={18} />
                 <span>Call Now</span>
-              </button>
+              </Link>
             </div>
           )}
         </div>
