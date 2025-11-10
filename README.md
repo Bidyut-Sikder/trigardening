@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TriGardening
 
-## Getting Started
+[Live Demo](https://trigardening-black.vercel.app/)
 
-First, run the development server:
+TriGardening is a **plant buying e-commerce web application** built with **Next.js**. Users can browse plants, add them to the cart, and complete purchases through a seamless checkout experience. The project emphasizes a clean, responsive, and interactive UI, based on a Figma design prototype.
 
+---
+
+## Table of Contents
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Folder Structure](#folder-structure)
+- [Contributing](#contributing)
+- [License](#license)
+
+---
+
+## Features
+- Browse a wide variety of plants for sale  
+- Add products to the cart  
+- Checkout and complete orders  
+- Responsive design for mobile and desktop devices  
+- Clean, modern, and intuitive UI based on Figma design  
+- Built with **Next.js** for fast performance  
+- Live deployment on **Vercel**
+
+---
+
+## Tech Stack
+- **Frontend:** Next.js, React.js  
+- **Styling:** Tailwind CSS (or CSS/SCSS)  
+- **State Management:** React Context API or Redux (if used)  
+- **Deployment:** Vercel  
+- **Version Control:** Git & GitHub  
+
+---
+
+## Installation
+To run this project locally:
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone [Your GitHub Repo Link]
 ```
+trigardening/
+│
+├── public/             # Static assets like images, icons
+├── pages/              # Next.js pages
+├── components/         # Reusable React components (Navbar, ProductCard, Cart, etc.)
+├── styles/             # CSS or Tailwind styles
+├── context/            # React Context (if used for cart state)
+├── .gitignore
+├── package.json
+├── README.md
+└── next.config.js
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
