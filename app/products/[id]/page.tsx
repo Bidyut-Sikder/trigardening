@@ -20,6 +20,7 @@ import LoginForm from "@/components/Forms/LoginForm";
 import LoginModal from "@/components/modals/LoginModal";
 import Modal from "react-modal";
 import ReviewForm from "@/components/Forms/ReviewForm";
+import CustomProductList from "@/components/common/CustomProductList";
 const GoldenPothosProduct = () => {
   const [selectedSize, setSelectedSize] = useState("Medium");
   const [quantity, setQuantity] = useState(1);
@@ -143,6 +144,88 @@ const GoldenPothosProduct = () => {
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog
           as="div"
+          className="relative z-50"
+          onClose={() => setIsOpen(false)}
+        >
+          {/* ✅ Blurred Background Overlay */}
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="fixed inset-0 bg-black/40 backdrop-blur-sm" />
+          </Transition.Child>
+
+          <div className="fixed inset-0 overflow-y-auto">
+            <div className="flex min-h-full items-center justify-center p-4">
+              {/* ✅ Modal Transition */}
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+              >
+                {/* ✅ Perfectly centered LoginForm with rounded white card */}
+                <Dialog.Panel className="">
+                  <LoginForm />
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </div>
+        </Dialog>
+      </Transition>
+
+      <Transition appear show={ReviewOpen} as={Fragment}>
+        <Dialog
+          as="div"
+          className="relative z-50"
+          onClose={() => setReviewOpen(false)}
+        >
+          {/* ✅ Blurred Background Overlay */}
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="fixed inset-0 bg-black/40 backdrop-blur-sm" />
+          </Transition.Child>
+
+          <div className="fixed inset-0 overflow-y-auto">
+            <div className="flex min-h-full items-center justify-center p-2">
+              {/* ✅ Modal Transition */}
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+              >
+                {/* ✅ Perfectly centered LoginForm with rounded white card */}
+                <Dialog.Panel className="">
+                  <ReviewForm />
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </div>
+        </Dialog>
+      </Transition>
+
+      {/* <Transition appear show={isOpen} as={Fragment}>
+        <Dialog
+          as="div"
           className="relative z-10"
           onClose={() => setIsOpen(false)}
         >
@@ -157,17 +240,16 @@ const GoldenPothosProduct = () => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="bg-white opacity-100 rounded-2xl p-8 ">
+                <Dialog.Panel className="bg-amber-600 opacity-100 rounded-2xl  ">
                   <LoginForm />
                 </Dialog.Panel>
               </Transition.Child>
             </div>
           </div>
         </Dialog>
-      </Transition>
+      </Transition> */}
 
-
-      <Transition appear show={ReviewOpen} as={Fragment}>
+      {/* <Transition appear show={ReviewOpen} as={Fragment}>
         <Dialog
           as="div"
           className="relative z-10"
@@ -191,10 +273,10 @@ const GoldenPothosProduct = () => {
             </div>
           </div>
         </Dialog>
-      </Transition>
+      </Transition> */}
 
       {/* Breadcrumb */}
-      <BreadCrumbNavigation />
+      {/* <BreadCrumbNavigation /> */}
 
       {/* Main Product Section */}
       <div className="container mx-auto px-4 py-8">
@@ -474,8 +556,7 @@ const GoldenPothosProduct = () => {
         </div>
         {/* Related Products */}
 
-        <FeaturedProducts />
-
+        <CustomProductList title="Related Products" bg="bg-[#F5F9E9]" />
         {/* Customer Reviews */}
 
         <div className="container  mx-auto px-6 py-12 bg-[#F3F3F3]">
@@ -551,7 +632,10 @@ const GoldenPothosProduct = () => {
             </div>
             <hr className="text-[#D9D9D9] mt-5 " />
             {/* Write Review Button */}
-            <button onClick={ ()=>setReviewOpen(true)} className="mt-8 flex items-center gap-2 bg-[#2D5016] text-white px-6 py-3 rounded-lg hover:bg-[#1f3810] transition">
+            <button
+              onClick={() => setReviewOpen(true)}
+              className="mt-8 flex items-center gap-2 bg-[#2D5016] text-white px-6 py-3 rounded-lg hover:bg-[#1f3810] transition"
+            >
               <Edit3 size={18} />
               <span className="font-medium">Write Review</span>
             </button>
