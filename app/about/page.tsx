@@ -1,13 +1,5 @@
-import { FiCheckCircle } from "react-icons/fi";
-import {
-  FaFacebookF,
-  FaYoutube,
-  FaPhone,
-  FaWhatsapp,
-  FaPencilAlt,
-  FaPhoneAlt,
-} from "react-icons/fa";
-import { Phone, Facebook } from "lucide-react";
+import { FaFacebookF, FaPhoneAlt } from "react-icons/fa";
+
 import Image from "next/image";
 import { TbBrandWhatsappFilled } from "react-icons/tb";
 export default function About() {
@@ -152,39 +144,49 @@ export default function About() {
         </p>
 
         <div className="container mx-auto grid md:grid-cols-2 gap-10 px-6 mt-12 items-center">
-          {/* Text */}
-          <div className="text-left">
-            <div className="flex items-start gap-4">
-              <div className="w-20 h-20 p-2 rounded-full flex justify-center items-center  mb-4">
-                <img src="/communitycon.png" alt="" />
+          <div className="text-left px-4 sm:px-6 lg:px-10">
+            {/* Community Items */}
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-6">
+              <div className="w-20 h-20 sm:w-24 sm:h-24 p-2 rounded-full flex justify-center items-center mb-2 sm:mb-0">
+                <img
+                  src="/communitycon.png"
+                  alt="Facebook Community"
+                  className="w-full h-full  object-contain"
+                />
               </div>
-              <div>
-                <h4 className="font-bold text-lg text-white">
+              <div className="text-center sm:text-left">
+                <h4 className="font-bold text-lg sm:text-xl text-white">
                   Facebook Community Forum
                 </h4>
-                <p className="text-white mt-1 text-sm">
+                <p className="text-white mt-1 text-sm sm:text-base">
                   Connect with 10,000+ gardeners in Bangladesh. Share tips, ask
                   questions!
                 </p>
               </div>
             </div>
-            <div className="flex items-start gap-4">
-              <div className="w-20 h-20 p-2 rounded-full flex justify-center items-center  mb-4">
-                <img src="/youtubeicon.png" alt="" />
+
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-6">
+              <div className="w-20 h-20 sm:w-24 sm:h-24 p-2 rounded-full flex justify-center items-center mb-2 sm:mb-0">
+                <img
+                  src="/youtubeicon.png"
+                  alt="YouTube Channel"
+                  className="w-full h-full object-contain"
+                />
               </div>
-              <div>
-                <h4 className="font-bold text-lg text-white">
+              <div className="text-center sm:text-left">
+                <h4 className="font-bold text-lg sm:text-xl text-white">
                   Trigardening Youtube Channel
                 </h4>
-                <p className="text-white mt-1 text-sm">
+                <p className="text-white mt-1 text-sm sm:text-base">
                   Join us on YouTube for quick gardening tips, tricks, and
                   guides to grow smarter.
                 </p>
               </div>
             </div>
 
+            {/* Join Button */}
             <div className="text-center mt-6">
-              <button className="p-2 pl-5 pr-5 rounded-xl bg-[#FFFFFF]">
+              <button className="px-6 py-2 rounded-xl bg-white text-black font-semibold hover:bg-gray-200 transition-colors">
                 Join Our Community
               </button>
             </div>
