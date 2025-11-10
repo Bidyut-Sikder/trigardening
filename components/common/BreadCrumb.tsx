@@ -22,24 +22,28 @@ export default function BreadCrumbNavigation() {
   ];
 
   return (
-    <div className=" w-full bg-white shadow">
+    <div className="w-full bg-white shadow">
       {/* Main Navigation */}
-      <nav className=" border-gray-200">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center space-x-8 h-16">
+      <nav className="border-gray-200">
+        <div className="container mx-auto px-3 sm:px-6 lg:px-8">
+          <div
+            className="flex items-center gap-6 sm:gap-8 h-14 sm:h-16 
+                       overflow-x-auto scrollbar-hide whitespace-nowrap"
+          >
             {navItems.map((item) => (
               <button
                 key={item}
                 onClick={() => setActiveNav(item)}
-                className={`relative px-1 py-5 text-base font-medium transition-colors ${
-                  activeNav === item
-                    ? "text-[#7A9B57]"
-                    : "text-gray-600 hover:text-gray-900"
-                }`}
+                className={`relative py-3 
+                  text-sm sm:text-base lg:text-lg font-medium transition-colors ${
+                    activeNav === item
+                      ? "text-[#7A9B57]"
+                      : "text-gray-600 hover:text-gray-900"
+                  }`}
               >
                 {item}
                 {activeNav === item && (
-                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-green-600"></span>
+                  <span className="absolute bottom-0 left-0 right-0 h-[3px] bg-green-600 rounded-full"></span>
                 )}
               </button>
             ))}
@@ -48,8 +52,8 @@ export default function BreadCrumbNavigation() {
       </nav>
 
       {/* Breadcrumbs */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
-        <div className="flex items-center space-x-2 text-sm">
+      <div className="container mx-auto px-3 sm:px-6 lg:px-8 py-3 sm:py-4">
+        <div className="flex items-center space-x-2 text-xs sm:text-sm lg:text-base">
           {breadcrumbs.map((crumb, index) => (
             <React.Fragment key={index}>
               <a
@@ -62,8 +66,9 @@ export default function BreadCrumbNavigation() {
               >
                 {crumb.label}
               </a>
+
               {index < breadcrumbs.length - 1 && (
-                <ChevronRight className="w-4 h-4 text-gray-400" />
+                <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 text-gray-400" />
               )}
             </React.Fragment>
           ))}

@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { ArrowLeft, Check } from "lucide-react";
 import ProgressSteps from "@/components/common/ProgressSteps";
+import Link from "next/link";
 
 interface Address {
   id: number;
@@ -79,7 +80,7 @@ const ShippingAddressPage = () => {
     <div className="min-h-screen bg-gray-50 py-8">
       <div className="container mx-auto px-4">
         {/* Progress Steps */}
-      <ProgressSteps step={2} />
+        <ProgressSteps step={2} />
 
         {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -142,12 +143,14 @@ const ShippingAddressPage = () => {
               </div>
 
               {/* Proceed Button */}
-              <button
-                onClick={handleProceedToCheckout}
-                className="w-full bg-[#2D5016] text-white py-4 rounded-lg font-semibold text-lg hover:bg-green-800 transition shadow-md"
-              >
-                Proceed to Checkout
-              </button>
+              <Link href={"/thankyou"}>
+                <button
+                  onClick={handleProceedToCheckout}
+                  className="w-full bg-[#2D5016] text-white py-4 rounded-lg font-semibold text-lg hover:bg-green-800 transition shadow-md"
+                >
+                  Proceed to Checkout
+                </button>
+              </Link>
             </div>
           </div>
 
