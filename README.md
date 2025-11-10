@@ -42,7 +42,9 @@ To run this project locally:
 
 1. Clone the repository:
 ```bash
-git clone [Your GitHub Repo Link]
+git clone https://github.com/Bidyut-Sikder/trigardening.git
+```
+## Project Structure
 ```
 trigardening/
 │
@@ -55,5 +57,5 @@ trigardening/
 ├── package.json
 ├── README.md
 └── next.config.js
-
+```
 
