@@ -5,12 +5,12 @@ const ReviewForm = () => {
   const [rating, setRating] = useState(0);
   const [hoverRating, setHoverRating] = useState(0);
   const [review, setReview] = useState("");
-  const [uploadedImages, setUploadedImages] = useState([]);
+  const [uploadedImages, setUploadedImages] = useState<string[]>([]);
 
-  const handleImageUpload = (e: any) => {
-    const files = Array.from(e.target.files);
-    const imageUrls = files.map((file) => URL.createObjectURL(file as Blob));
-    // setUploadedImages([...uploadedImages, ...imageUrls]);
+  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = e.target.files ? Array.from(e.target.files) : [];
+    const imageUrls = files.map((file) => URL.createObjectURL(file));
+    setUploadedImages((prev) => [...prev, ...imageUrls]);
   };
 
   const handleSubmit = () => {
@@ -29,7 +29,7 @@ const ReviewForm = () => {
   };
 
   return (
-<div className="w-75 md:w-full lg:w-full  max-w-sm mx-auto p-4 sm:p-6 lg:p-8 bg-[#F3F3F3] rounded-2xl">
+    <div className="w-75 md:w-full lg:w-full  max-w-sm mx-auto p-4 sm:p-6 lg:p-8 bg-[#F3F3F3] rounded-2xl">
       {/* Header */}
       <h1 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-6">
         Write Your Review
@@ -40,7 +40,11 @@ const ReviewForm = () => {
       {/* Product Info */}
       <div className="flex flex-col sm:flex-row gap-6 mb-5">
         <div className="w-28 h-28 sm:w-32 sm:h-32 bg-gray-100 rounded-2xl overflow-hidden shrink-0">
-          <img src="/reviewimg.png" alt="Product" className="w-full h-full object-cover" />
+          <img
+            src="/reviewimg.png"
+            alt="Product"
+            className="w-full h-full object-cover"
+          />
         </div>
 
         <div className="flex-1">
@@ -128,7 +132,9 @@ const ReviewForm = () => {
                 />
                 <button
                   onClick={() =>
-                    setUploadedImages(uploadedImages.filter((_, i) => i !== idx))
+                    setUploadedImages(
+                      uploadedImages.filter((_, i) => i !== idx)
+                    )
                   }
                   className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center text-xs hover:bg-red-600"
                 >
@@ -157,9 +163,6 @@ const ReviewForm = () => {
         </button>
       </div>
     </div>
-
-
-
 
     // <div className="z-120 w-sm h-50 md:w-md md:h-140">
     //   {/* Header */}

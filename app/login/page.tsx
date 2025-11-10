@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import { ArrowLeft, Check } from "lucide-react";
-import ProgressSteps from "../common/ProgressSteps";
+import ProgressSteps from "@/components/common/ProgressSteps";
+
 
 interface OrderItem {
   id: number;
@@ -13,7 +14,7 @@ interface OrderItem {
   image: string;
 }
 
-const NonUser = () => {
+const LoginPage = () => {
   const [formData, setFormData] = useState({
     fullName: "",
     phoneNumber: "",
@@ -25,32 +26,7 @@ const NonUser = () => {
     password: "",
   });
 
-  // const orderItems: OrderItem[] = [
-  //   {
-  //     id: 1,
-  //     name: 'Fiddle Leaf Plant',
-  //     size: '6" Pot',
-  //     quantity: 2,
-  //     price: 300,
-  //     image: 'https://images.unsplash.com/photo-1614594975525-e45190c55d0b?w=200&q=80'
-  //   },
-  //   {
-  //     id: 2,
-  //     name: 'Monstera Delisiosa',
-  //     size: '6" Pot',
-  //     quantity: 2,
-  //     price: 300,
-  //     image: 'https://images.unsplash.com/photo-1614594895304-fe7116ac3b58?w=200&q=80'
-  //   },
-  //   {
-  //     id: 3,
-  //     name: 'Vermi Compost',
-  //     size: '6" Pot',
-  //     quantity: 2,
-  //     price: 300,
-  //     image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=200&q=80'
-  //   }
-  // ];
+
 
   const orderItems: OrderItem[] = [
     {
@@ -337,4 +313,4 @@ const NonUser = () => {
   );
 };
 
-export default NonUser;
+export default LoginPage;

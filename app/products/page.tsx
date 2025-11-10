@@ -4,17 +4,7 @@ import BreadCrumbNavigation from "@/components/common/BreadCrumb";
 import ProductCard from "@/components/common/ProductCard";
 
 export default function TriGardeningShop() {
-  const renderStars = (rating: any) => {
-    return [...Array(5)].map((_, i) => (
-      <Star
-        key={i}
-        size={16}
-        className={
-          i < rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
-        }
-      />
-    ));
-  };
+  
 
   return (
     <div className="min-h-screen bg-gray-50 pt-5 ">

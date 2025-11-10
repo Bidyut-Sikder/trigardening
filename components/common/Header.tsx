@@ -101,7 +101,7 @@ function Header() {
                 </span>
               </Link>
 
-              <Link href={'/about'} className="hidden md:block">
+              <Link href={'/login'} className="hidden md:block">
                 <User size={24} />
               </Link>
 

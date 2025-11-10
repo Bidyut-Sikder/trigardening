@@ -1,24 +1,15 @@
 "use client";
 import React, { useState } from "react";
-import {
-  Heart,
-  ShoppingCart,
-  ThumbsUp,
-  MessageCircle,
-  Star,
-  ChevronRight,
-} from "lucide-react";
+import { Heart, Star } from "lucide-react";
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment } from "react";
-import BreadCrumbNavigation from "@/components/common/BreadCrumb";
-import FeaturedProducts from "@/components/common/FeaturedProducts";
+
 import { ChevronDown } from "lucide-react";
 import { Edit3 } from "lucide-react";
 import ReviewList from "@/components/common/ReviewList";
-import Swal from "sweetalert2";
+
 import LoginForm from "@/components/Forms/LoginForm";
-import LoginModal from "@/components/modals/LoginModal";
-import Modal from "react-modal";
+
 import ReviewForm from "@/components/Forms/ReviewForm";
 import CustomProductList from "@/components/common/CustomProductList";
 const GoldenPothosProduct = () => {
@@ -117,7 +108,7 @@ const GoldenPothosProduct = () => {
     { name: "Large", price: "৳ 150" },
   ];
 
-  const renderStars = (rating: any) => {
+  const renderStars = (rating: number) => {
     return [...Array(5)].map((_, i) => (
       <Star
         key={i}

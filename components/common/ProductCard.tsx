@@ -1,7 +1,19 @@
 import Link from "next/link";
 import { FaStar } from "react-icons/fa";
 
-export default function ProductCard({ item }: { item: any }) {
+export interface Product {
+  id: number;
+  name: string;
+  category: string;
+  price: string; // because you are using a range like "180 - 450"
+  rating: number;
+  reviews: number;
+  image: string;
+}
+
+
+export default function ProductCard({ item }: { item: Product }) {
+
   return (
     <div className="relative group z-0 bg-white h-[380px] rounded-xl shadow-md hover:shadow-2xl overflow-hidden flex flex-col cursor-pointer transition">
       {/* Overlay Add to Cart Button (Hidden by default) */}
