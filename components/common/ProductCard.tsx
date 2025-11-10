@@ -72,7 +72,7 @@ export default function ProductCard({ item }: { item: Product }) {
         </button>
         <Link href={`/products/${item.id}`} passHref>
           <span
-            className="absolute w-[350px] md:w-[360px] lg:w-[379px] left-1/2 bottom-0 -translate-x-1/2
+            className="absolute w-full  left-1/2 bottom-0 -translate-x-1/2
          bg-[#7A9B57] text-white py-4 px-5 rounded-b-lg flex items-center justify-center
           opacity-0 translate-y-4 scale-95 group-hover:opacity-100 group-hover:translate-y-0 group-hover:scale-100
           z-20 transition-all duration-500 ease-in-out"
